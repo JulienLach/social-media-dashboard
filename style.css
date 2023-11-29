@@ -90,7 +90,19 @@ body {
 .big-card2,
 .big-card3,
 .big-card4 {
+    cursor: pointer;
     background-color: hsl(0, 0%, 93%);
+    border-radius: 0.4em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    transition: 0.2s;
+}
+
+.big-card1:hover,
+.big-card2:hover,
+.big-card3:hover,
+.big-card4:hover {
+    background-color: hsl(0, 0%, 88%);
     border-radius: 0.4em;
     padding-top: 3em;
     padding-bottom: 3em;
@@ -118,14 +130,14 @@ body {
 }
 
 .big-card-content .big-card-text h1 {
-    font-size: 3em;
+    font-size: 4em;
 }
 
 .big-card-content .big-card-text p {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: hsl(228, 12%, 44%);
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .big-card-content .big-card-up {
@@ -163,23 +175,45 @@ body {
 .small-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-    gap: 4em;
+    gap: 3em;
 }
 
 .small-card1,
 .small-card2,
 .small-card3,
-.small-card4 {
+.small-card4,
+.small-card5,
+.small-card6,
+.small-card7,
+.small-card8 {
+    cursor: pointer;
     background-color: hsl(0, 0%, 93%);
     border-radius: 0.4em;
-    padding-top: 2em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    transition: 0.2s;
+}
+
+.small-card1:hover,
+.small-card2:hover,
+.small-card3:hover,
+.small-card4:hover,
+.small-card5:hover,
+.small-card6:hover,
+.small-card7:hover,
+.small-card8:hover {
+    background-color: hsl(0, 0%, 88%);
+    border-radius: 0.4em;
+    padding-top: 1em;
     padding-bottom: 2em;
 }
+
+
 
 .small-card-content {
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 1.2em;
     width: 90%;
     margin: auto;
 }
@@ -200,11 +234,17 @@ body {
     justify-content: space-between;
 }
 
+.small-card-text h3 {
+    font-size: 2.5em;
+}
+
 .small-card-up {
     display: flex;
     align-items: center;
     color: hsl(163, 72%, 41%);
     font-weight: bold;
+    font-size: 0.8em;
+    gap: 0.4em;
 }
 
 .small-card-down {
@@ -212,6 +252,8 @@ body {
     align-items: center;
     color: hsl(356, 69%, 56%);
     font-weight: bold;
+    font-size: 0.8em;
+    gap: 0.4em;
 }
 
 /* CLASSES UTILITAIRES */
