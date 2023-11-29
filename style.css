@@ -20,15 +20,25 @@ body {
     margin: 2em auto;
 }
 
+.header-content .header-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+}
+
 .header-content p {
     font-weight: bold;
     color: hsl(228, 12%, 44%);
 }
 
+
+
 .header-content h1 {
     font-size: 2em;
     color: hsl(230, 17%, 14%);
 }
+
+
 
 .header-content .toggler {
     display: flex;
@@ -167,6 +177,7 @@ body {
 
 .second-header {
     margin: 3em auto;
+    color: hsl(228, 12%, 44%);
 }
 
 
@@ -189,8 +200,8 @@ body {
     cursor: pointer;
     background-color: hsl(0, 0%, 93%);
     border-radius: 0.4em;
-    padding-top: 1em;
-    padding-bottom: 2em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
     transition: 0.2s;
 }
 
@@ -204,8 +215,8 @@ body {
 .small-card8:hover {
     background-color: hsl(0, 0%, 88%);
     border-radius: 0.4em;
-    padding-top: 1em;
-    padding-bottom: 2em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
 }
 
 
@@ -266,7 +277,6 @@ body {
 
 /* SWITCH BUTTON */
 
-
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -307,8 +317,14 @@ body {
     transition: .4s;
 }
 
-input:checked+.slider {
-    background-color: #2196F3;
+/* Additional styles for the active state of the switch */
+input:checked+.slider.round {
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+/* Additional styles for the active state of the switch's round div */
+input:checked+.slider.round:before {
+    background-color: hsl(0, 0%, 0%);
 }
 
 input:focus+.slider {
@@ -328,4 +344,28 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+
+/* DARK MODE */
+
+
+body.active {
+    background-color: hsl(230, 17%, 14%);
+}
+
+.title-dark.active {
+    color: #FFF;
+}
+
+.big-card-dark.active {
+    background-color: hsl(228, 28%, 20%);
+}
+
+.dark-p.active {
+    color: hsl(228, 34%, 66%) !important;
+}
+
+.small-card-dark.active {
+    background-color: hsl(228, 28%, 20%);
 }
