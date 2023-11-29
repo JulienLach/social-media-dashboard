@@ -1,0 +1,28 @@
+/* MAIN SELECTORS */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* BIG CARDS */
+
+.big-cards {
+    display: flex;
+}
+
+
+
+
+
+/* SMALL CARDS */
+
+.small-cards {
+    display: flex;
+}
