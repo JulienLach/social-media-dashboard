@@ -20,36 +20,132 @@ body {
     margin: 2em auto;
 }
 
-.header-content .toggler {
-    display: flex;
-    gap: 1em;
+.header-content p {
+    font-weight: bold;
+    color: hsl(228, 12%, 44%);
 }
 
+.header-content h1 {
+    font-size: 2em;
+    color: hsl(230, 17%, 14%);
+}
+
+.header-content .toggler {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
 
 
 /* BIG CARDS */
 
 .big-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 2em;
     margin-bottom: 3em;
 }
+
+.line-facebook {
+    position: relative;
+    top: -3em;
+    border-top-right-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+    height: 6px;
+    width: 100%;
+    background-color: hsl(208, 92%, 53%);
+}
+
+.line-twitter {
+    position: relative;
+    top: -3em;
+    border-top-right-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+    height: 6px;
+    width: 100%;
+    background-color: hsl(203, 89%, 53%);
+}
+
+.line-instagram {
+    position: relative;
+    top: -3em;
+    border-top-right-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+.line-youtube {
+    position: relative;
+    top: -3em;
+    border-top-right-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+    height: 6px;
+    width: 100%;
+    background-color: hsl(348, 97%, 39%);
+}
+
+.big-card1,
+.big-card2,
+.big-card3,
+.big-card4 {
+    background-color: hsl(0, 0%, 93%);
+    border-radius: 0.4em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
 
 .big-card-content {
     display: flex;
     flex-direction: column;
     text-align: center;
+    gap: 1.7em;
+}
+
+.big-card-content .big-card-img p {
+    color: hsl(228, 12%, 44%);
+    font-weight: bold;
+    font-size: 0.9em;
 }
 
 .big-card-content .big-card-img {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+}
+
+.big-card-content .big-card-text h1 {
+    font-size: 3em;
+}
+
+.big-card-content .big-card-text p {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: hsl(228, 12%, 44%);
+    font-size: 0.8em;
 }
 
 .big-card-content .big-card-up {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.4em;
+    color: hsl(163, 72%, 41%);
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.big-card-content .big-card-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+    color: hsl(356, 69%, 56%);
+    font-weight: bold;
+    font-size: 0.8em;
 }
 
 
@@ -66,19 +162,37 @@ body {
 
 .small-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     gap: 4em;
+}
+
+.small-card1,
+.small-card2,
+.small-card3,
+.small-card4 {
+    background-color: hsl(0, 0%, 93%);
+    border-radius: 0.4em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .small-card-content {
     display: flex;
     flex-direction: column;
     gap: 3em;
+    width: 90%;
+    margin: auto;
 }
 
 .small-card-header {
     display: flex;
     justify-content: space-between;
+}
+
+.small-card-header p {
+    color: hsl(228, 12%, 44%);
+    font-weight: bold;
+    font-size: 0.9em;
 }
 
 .small-card-text {
@@ -89,11 +203,15 @@ body {
 .small-card-up {
     display: flex;
     align-items: center;
+    color: hsl(163, 72%, 41%);
+    font-weight: bold;
 }
 
 .small-card-down {
     display: flex;
     align-items: center;
+    color: hsl(356, 69%, 56%);
+    font-weight: bold;
 }
 
 /* CLASSES UTILITAIRES */
@@ -101,4 +219,71 @@ body {
 .container {
     width: 85%;
     margin: auto;
+}
+
+
+/* SWITCH BUTTON */
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #adadad;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
