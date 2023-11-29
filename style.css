@@ -11,12 +11,42 @@ body {
 }
 
 
+/* HEADER */
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em auto;
+}
+
+.header-content .toggler {
+    display: flex;
+    gap: 1em;
+}
+
+
+
 /* BIG CARDS */
 
 .big-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.big-card-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.big-card-content .big-card-img {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* SECOND HEADER */
 
 
 
@@ -24,5 +54,15 @@ body {
 /* SMALL CARDS */
 
 .small-cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+
+/* CLASSES UTILITAIRES */
+
+.container {
+    width: 85%;
+    margin: auto;
 }
