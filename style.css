@@ -39,6 +39,14 @@ body {
 }
 
 
+.grey-line {
+    display: none;
+    height: 1px;
+    background-color: rgb(184, 184, 184);
+    border-radius: 4em;
+    width: 100%;
+}
+
 
 .header-content .toggler {
     display: flex;
@@ -324,7 +332,7 @@ input:checked+.slider.round {
 
 /* Additional styles for the active state of the switch's round div */
 input:checked+.slider.round:before {
-    background-color: hsl(0, 0%, 0%);
+    background-color: hsl(230, 17%, 14%);
 }
 
 input:focus+.slider {
@@ -362,10 +370,46 @@ body.active {
     background-color: hsl(228, 28%, 20%);
 }
 
+.big-card-dark.active:hover {
+    background-color: hsl(229, 23%, 28%);
+}
+
 .dark-p.active {
     color: hsl(228, 34%, 66%) !important;
 }
 
 .small-card-dark.active {
     background-color: hsl(228, 28%, 20%);
+}
+
+.small-card-dark.active:hover {
+    background-color: hsl(229, 23%, 28%);
+}
+
+
+/* MEDIA QUERIES */
+
+@media(max-width: 450px) {
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 1em;
+    }
+
+    .header-content h1 {
+        font-size: 1.4em;
+    }
+
+    .grey-line {
+        display: block;
+    }
+
+    .toggler {
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
